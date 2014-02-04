@@ -1,0 +1,8 @@
+# better status bar
+
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}'
+
+# no welcome message
+startup_message off
