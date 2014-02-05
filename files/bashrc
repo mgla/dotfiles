@@ -2,7 +2,6 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias vi="vim"
 
-export PATH="$PATH:~/bin"
 
 # Test for an interactive shell.
 
@@ -18,7 +17,10 @@ fi
 shopt -s checkwinsize
 
 # History appending instead of overwriting. 
-shopt -s histappend
+shopt -s histappnd
+# longer hist file
+HISTFILESIZE=2000
+
 
 # Change the window title of X terminals 
 case ${TERM} in
@@ -76,3 +78,8 @@ fi
 # Try to keep environment pollution down, EPA loves us.
 unset use_color safe_term match_lhs
 #~/motd.pl
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "~/bin" ] ; then
+  export PATH="~/bin:$PATH"
+fi
