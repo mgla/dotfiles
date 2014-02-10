@@ -29,6 +29,7 @@ alias ll="ls -l"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias sudude="sudo'
+alias sudude="sudo"
 
 export PATH=~/bin:$PATH
+
