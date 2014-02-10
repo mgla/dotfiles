@@ -26,3 +26,7 @@ zstyle ':completion:*' list-colors ''
 
 alias ls="ls --color=auto"
 alias ll="ls -l"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias sudude="sudo'
