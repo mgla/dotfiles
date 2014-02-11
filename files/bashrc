@@ -21,7 +21,7 @@ fi
 shopt -s checkwinsize
 
 # History appending instead of overwriting. 
-shopt -s histappnd
+shopt -s histappend
 # longer hist file
 HISTFILESIZE=2000
 
