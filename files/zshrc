@@ -33,6 +33,7 @@ alias sudude="sudo"
 # meme alias
 alias wow="git status"
 alias such="git"
+alias many="git"
 alias very="git"
 
 # add local bin to path

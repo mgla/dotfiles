@@ -9,6 +9,7 @@ alias ....="cd ../../.."
 # meme alias
 alias wow="git status"
 alias such="git"
+alias many="git"
 alias very="git"
 
 
