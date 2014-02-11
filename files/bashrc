@@ -6,6 +6,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# meme alias
+alias wow="git status"
+alias such="git"
+alias very="git"
+
 
 # Test for an interactive shell.
 

@@ -30,6 +30,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias sudude="sudo"
+# meme alias
+alias wow="git status"
+alias such="git"
+alias very="git"
 
+# add local bin to path
 export PATH=~/bin:$PATH
 
