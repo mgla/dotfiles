@@ -35,6 +35,7 @@ alias wow="git status"
 alias such="git"
 alias many="git"
 alias very="git"
+alias much="git"
 
 # add local bin to path
 export PATH=~/bin:$PATH

@@ -11,6 +11,8 @@ alias wow="git status"
 alias such="git"
 alias many="git"
 alias very="git"
+alias much="git"
+
 
 
 # Test for an interactive shell.
