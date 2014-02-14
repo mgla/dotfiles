@@ -40,3 +40,7 @@ alias much="git"
 # add local bin to path
 export PATH=~/bin:$PATH
 
+# keybindings
+
+bindkey '^R' history-incremental-search-backward
+
