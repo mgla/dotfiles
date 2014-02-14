@@ -12,9 +12,13 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-autoload -U promptinit
-promptinit
-prompt redhat
+# prompt config
+autoload -U promptinit && promptinit
+autoload -U colors && colors
+
+#prompt redhat
+PROMPT="%{$bg[white]$fg[blue]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%}"
+RPROMPT="[%*]"
 
 # fancy completion
 
