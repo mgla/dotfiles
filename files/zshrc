@@ -34,7 +34,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias sudude="sudo"
-alias please="sudo !!"
+alias please='sudo $(history -n -1)'
 # meme alias
 alias wow="git status"
 alias such="git"
