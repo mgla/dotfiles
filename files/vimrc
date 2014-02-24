@@ -6,6 +6,10 @@ set shiftwidth=4
 set autoindent
 set cursorline
 
+" highlight trailing spaces   
+set list listchars=trail:.
+
+
 set viminfo='10,"\100,:20,%,n~/.viminfo
 
 " return to last line
