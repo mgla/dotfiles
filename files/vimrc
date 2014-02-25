@@ -6,8 +6,9 @@ set shiftwidth=4
 set autoindent
 set cursorline
 
-" highlight trailing spaces   
-set list listchars=trail:.
+" highlight trailing spaces and tabs
+set list!
+set listchars=tab:»·,trail:·
 
 
 set viminfo='10,"\100,:20,%,n~/.viminfo
