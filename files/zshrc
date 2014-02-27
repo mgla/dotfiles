@@ -41,6 +41,8 @@ alias such="git"
 alias many="git"
 alias very="git"
 alias much="git"
+# VUM!
+alias vum="vim"
 
 # add local bin to path
 export PATH=~/bin:$PATH
