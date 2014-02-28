@@ -48,6 +48,20 @@ alias vum="vim"
 export PATH=~/bin:$PATH
 
 # keybindings
+case $TERM in
+  linux|screen)
+    bindkey "^[[2~" yank
+    bindkey "^[[3~" delete-char
+    bindkey "^[[1~" beginning-of-line
+    bindkey "^[[4~" end-of-line
+  ;;
+  *xterm*|rxvt*|(dt|k|E|a)term)
+    bindkey "^[[2~" yank
+    bindkey "^[[3~" delete-char
+    bindkey "^[[7~" beginning-of-line
+    bindkey "^[[8~" end-of-line
+  ;;
+esac
 
 bindkey '^R' history-incremental-search-backward
 bindkey '^[OF' end-of-line
