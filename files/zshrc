@@ -16,8 +16,9 @@ bindkey -v
 autoload -U promptinit && promptinit
 autoload -U colors && colors
 
-#prompt redhat
-PROMPT="%{$bg[white]$fg[blue]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%}"
+# prompt config
+PROMPT="%(!.%{$bg[white]$fg[red]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%}.%{$bg[white]$fg[blue]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%})"
+# show time on right side
 RPROMPT="[%T]"
 
 # fancy completion
