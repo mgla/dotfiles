@@ -51,6 +51,8 @@ alias ifconfig="PATH=/sbin ifconfig"
 
 # add local bin to path
 export PATH=~/bin:$PATH
+# export vim as editor
+export EDITOR=vim
 
 # keybindings
 case $TERM in
