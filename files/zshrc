@@ -45,6 +45,9 @@ alias very="git"
 alias much="git"
 # VUM!
 alias vum="vim"
+# I want ifconfig everywhere
+alias ifconfig="PATH=/sbin ifconfig"
+
 
 # add local bin to path
 export PATH=~/bin:$PATH
