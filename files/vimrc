@@ -6,6 +6,10 @@ set shiftwidth=4
 set autoindent
 set cursorline
 
+" smarter searching..
+set ignorecase
+set smartcase
+
 " highlight trailing spaces and tabs
 set list!
 set listchars=tab:»·,trail:·
