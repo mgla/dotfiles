@@ -73,3 +73,7 @@ esac
 bindkey '^R' history-incremental-search-backward
 bindkey '^[OF' end-of-line
 bindkey '^[OH' beginning-of-line
+
+if [ -f ~/.zshrc.more ]; then
+	source ~/.zshrc.more
+fi
