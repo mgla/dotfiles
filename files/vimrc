@@ -6,10 +6,6 @@ set shiftwidth=4
 set autoindent
 set cursorline
 
-" smarter searching..
-set ignorecase
-set smartcase
-
 " highlight trailing spaces and tabs
 set list!
 set listchars=tab:»·,trail:·
@@ -34,3 +30,8 @@ augroup END
 autocmd FileType make setlocal noexpandtab
 " expand tabs in perl
 autocmd FileType perl setlocal expandtab
+
+" perl smartsearch: if lowercase, ignore case
+set ignorecase
+set smartcase
+set incsearch
