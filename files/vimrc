@@ -32,3 +32,5 @@ augroup END
 
 " never expand tabs in Makefiles - bugs them out
 autocmd FileType make setlocal noexpandtab
+" expand tabs in perl
+autocmd FileType perl setlocal expandtab
