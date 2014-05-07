@@ -35,3 +35,7 @@ autocmd FileType perl setlocal expandtab
 set ignorecase
 set smartcase
 set incsearch
+
+" bind F4 to hlsearch
+set hlsearch
+noremap <F4> :set hlsearch! hlsearch?<CR>
