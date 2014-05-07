@@ -39,3 +39,9 @@ set incsearch
 " bind F4 to hlsearch
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" ugly block comment macro
+let @a='I#OBOA'
+
+noremap <F5> @a
+noremap <F6> x
