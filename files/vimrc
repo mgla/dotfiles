@@ -45,3 +45,6 @@ let @a='I#OBOA'
 
 noremap <F5> @a
 noremap <F6> x
+
+" better file completition while opening files from vim
+set wildmode=list:longest
