@@ -1,3 +1,3 @@
 # Dotfiles
 
-Just some random dotfiles, nothing to see here
+Some random dotfiles. Feel free to use.
