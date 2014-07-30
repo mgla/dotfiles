@@ -26,10 +26,14 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
+filetype indent plugin on
+
 " never expand tabs in Makefiles - bugs them out
 autocmd FileType make setlocal noexpandtab
 " expand tabs in perl
 autocmd FileType perl setlocal expandtab
+" python settings
+autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 
 
 " perl smartsearch: if lowercase, ignore case
 set ignorecase
