@@ -1,5 +1,5 @@
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/maik/.zshrc'
+zstyle :compinstall filename '/home/glatki/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -73,6 +73,9 @@ esac
 bindkey '^R' history-incremental-search-backward
 bindkey '^[OF' end-of-line
 bindkey '^[OH' beginning-of-line
+
+# ignore debian global rc file
+unsetopt global_rcs
 
 if [ -f ~/.zshrc.more ]; then
 	source ~/.zshrc.more
