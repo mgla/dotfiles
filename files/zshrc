@@ -75,6 +75,9 @@ bindkey '^[OF' end-of-line
 bindkey '^[OH' beginning-of-line
 bindkey '^R' history-incremental-search-backward
 
+# ignore debian global rc file
+unsetopt global_rcs
+
 if [ -f ~/.zshrc.more ]; then
 	source ~/.zshrc.more
 fi
