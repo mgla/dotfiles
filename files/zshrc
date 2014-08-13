@@ -48,7 +48,6 @@ alias vum="vim"
 # I want ifconfig everywhere
 alias ifconfig="PATH=/sbin ifconfig"
 
-
 # add local bin to path
 export PATH=~/bin:$PATH
 # export vim as editor
@@ -70,12 +69,11 @@ case $TERM in
   ;;
 esac
 
-bindkey '^R' history-incremental-search-backward
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
 bindkey '^[OF' end-of-line
 bindkey '^[OH' beginning-of-line
-
-# ignore debian global rc file
-unsetopt global_rcs
+bindkey '^R' history-incremental-search-backward
 
 if [ -f ~/.zshrc.more ]; then
 	source ~/.zshrc.more
