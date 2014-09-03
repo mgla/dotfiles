@@ -7,6 +7,7 @@ FILES="$DIR/files"
 set -x
 install $FILES/zshrc ~/.zshrc
 install $FILES/vimrc ~/.vimrc
+touch ~/.vimrc.more
 install $FILES/bashrc ~/.bashrc
 install $FILES/screenrc ~/.screenrc
 install $FILES/zprofile ~/.zprofile

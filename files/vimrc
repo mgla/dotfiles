@@ -53,3 +53,5 @@ noremap <F6> x
 
 " better file completition while opening files from vim
 set wildmode=list:longest
+
+source ~/.vimrc.more
