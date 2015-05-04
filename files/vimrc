@@ -36,6 +36,7 @@ autocmd FileType make setlocal noexpandtab
 " expand tabs in perl and config files
 autocmd FileType perl setlocal expandtab
 autocmd FileType conf setlocal expandtab
+autocmd FileType apache setlocal expandtab
 " python settings
 autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 
 
