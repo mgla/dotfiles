@@ -7,7 +7,6 @@ set number
 set tabstop=4
 set shiftwidth=4
 set autoindent
-set cursorline
 
 " highlight trailing spaces and tabs
 set list!
