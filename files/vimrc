@@ -37,7 +37,9 @@ autocmd FileType perl setlocal expandtab
 autocmd FileType conf setlocal expandtab
 autocmd FileType apache setlocal expandtab
 " python settings
-autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 
+autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+" javascript settings
+autocmd FileType javascript setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 " perl smartsearch: if lowercase, ignore case
 set ignorecase
