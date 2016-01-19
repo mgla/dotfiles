@@ -2,5 +2,7 @@
 	editor = vim
 [color]
 	ui = auto
+[push]
+	default = simple
 [alias]
 	lol = log --decorate --graph
