@@ -1,12 +1,16 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-colorscheme evening
 syntax on
 set number
 set tabstop=4
 set shiftwidth=4
 set autoindent
+
+" Colorscheme
+colorscheme elflord
+set bg=dark
+set t_Co=256
 
 " highlight trailing spaces and tabs
 set list!
@@ -60,7 +64,19 @@ noremap <F6> x
 " better file completition while opening files from vim
 set wildmode=list:longest
 
-" plugins
+""" Plugins
+"" pathogen
 execute pathogen#infect()
+
+"" vim-airline
+" hide mode indicator from vanilla vim
+set noshowmode
+" autoshow
+set laststatus=2
+" fugitive integration
+let g:airline#extensions#branch#enabled = 1
+" powerline font
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
+let g:airline_powerline_fonts = 1
 
 source ~/.vimrc.more
