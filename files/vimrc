@@ -60,4 +60,7 @@ noremap <F6> x
 " better file completition while opening files from vim
 set wildmode=list:longest
 
+" plugins
+execute pathogen#infect()
+
 source ~/.vimrc.more
