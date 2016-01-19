@@ -1,0 +1,6 @@
+[core]
+	editor = vim
+[color]
+	ui = auto
+[alias]
+	lol = log --decorate --graph

@@ -9,6 +9,7 @@ INSTALL="install --mode=644"
 set -x
 $INSTALL $FILES/zshrc ~/.zshrc
 $INSTALL $FILES/bashrc ~/.bashrc
+$INSTALL $FILES/gitconfig ~/.gitconfig
 $INSTALL $FILES/screenrc ~/.screenrc
 $INSTALL $FILES/zprofile ~/.zprofile
 
