@@ -37,7 +37,7 @@ filetype indent plugin on
 autocmd FileType make setlocal noexpandtab
 " Perl: expand tabs, use fold markers
 autocmd FileType perl setlocal expandtab
-autocmd FileType perl setlocal foldmethod=marker foldlevel=3
+autocmd FileType perl setlocal foldmethod=marker foldlevel=1
 " Clean tabs for .conf and apache files
 autocmd FileType conf setlocal expandtab
 autocmd FileType apache setlocal expandtab
