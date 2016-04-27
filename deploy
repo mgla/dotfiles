@@ -1,0 +1,63 @@
+#!/usr/bin/perl
+# Deploying config files. Overwrites everything. Only use if you know what to do.
+
+use strict;
+use warnings;
+
+# Core modules
+require Cwd;
+require File::Basename;
+require File::Spec;
+
+# Get repository directory
+my $repodir = File::Basename::dirname(Cwd::abs_path(__FILE__));
+my $files = File::Spec->catdir($repodir, 'files');
+
+# Create vim skeleton, if not existing.
+# Perl has no good core modules for touching files and recursive creation of directory trees.
+# Thus, we fall back to mkdir and touch here until a better implementation comes along.
+system('touch ~/.vimrc.more');
+system('mkdir -p ~/.vim/autoload');
+system('mkdir -p ~/.vim/bundle');
+
+# Files for direct installation.
+my %install = (
+    'zshrc'     => '%HOME%/.zshrc',
+    'bashrc'    => '%HOME%/.bashrc',
+    'gitconfig' => '%HOME%/.gitconfig',
+    'screenrc'  => '%HOME%/.screenrc',
+    'zprofile'  => '%HOME%/.zprofile',
+    'vimrc'     => '%HOME%/.vimrc',
+    'vim/autoload/pathogen.vim' => '%HOME%/.vim/autoload/pathogen.vim'
+);
+
+while (my ($key, $to) = each %install) {
+    if (! -d $ENV{"HOME"}) {
+        die "Fatal: Homedir does not exist";
+    }
+    my $from = sprintf('%s/%s', $files, $key);
+    $to =~ s/%HOME%/$ENV{"HOME"}/;
+    if (! -e $to) {
+        printf("Install %s as %s\n", $from, $to);
+        system('/usr/bin/install', '--mode=644', $from, $to);
+    }
+}
+
+my %vimgithub = (
+    'vim-gitgutter'      => 'airblade/vim-gitgutter.git',
+    'vim-airline'        => 'vim-airline/vim-airline.git',
+    'vim-airline-themes' => 'vim-airline/vim-airline-themes',
+    'vim-fugitive'       => 'tpope/vim-fugitive.git'
+);
+
+# Update/Install plugins from github
+# FIXME this is a huge security risk.
+while (my ($module, $path) = each %vimgithub) {
+    chdir File::Spec->catdir($ENV{"HOME"}, '.vim', 'bundle') or die $!;
+    if ( -d $module) {
+        chdir $module;
+        system('git pull -q');
+    } else {
+        system('git','clone', sprintf('git://github.com/%s', $path));
+    }
+}
