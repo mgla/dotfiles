@@ -46,7 +46,7 @@ autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 " javascript settings
 autocmd FileType javascript setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 " Puppet files
-autocmd *.pp setlocal noexpandtab
+autocmd BufRead,BufNewFile *.pp setlocal noexpandtab
 
 " perl smartsearch: if lowercase, ignore case
 set ignorecase

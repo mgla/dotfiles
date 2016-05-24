@@ -37,10 +37,8 @@ while (my ($key, $to) = each %install) {
     }
     my $from = sprintf('%s/%s', $files, $key);
     $to =~ s/%HOME%/$ENV{"HOME"}/;
-    if (! -e $to) {
-        printf("Install %s as %s\n", $from, $to);
-        system('/usr/bin/install', '--mode=644', $from, $to);
-    }
+    printf("Install %s as %s\n", $from, $to);
+    system('/usr/bin/install', '--mode=644', $from, $to);
 }
 
 my %vimgithub = (
