@@ -57,10 +57,19 @@ set incsearch
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
+" toggle paste mode
+set pastetoggle=<F2>
+set scrolloff=3
+" move lines
+nnoremap <M-Down> :m .+1<CR>
+nnoremap <M-Up> :m .-2<CR>
+inoremap <M-Down> <Esc>:m .+1<CR>gi
+inoremap <M-Up> <Esc>:m .-2<CR>gi
+vnoremap <M-Down> :m '>+1<CR>gv
+vnoremap <M-Up> :m '<-2<CR>gv
+" map <F5> to comment and <F6> to pseudo uncomment
 " ugly block comment macro
 let @a='I#OBOA'
-
-" map <F5> to comment and <F6> to pseudo uncomment
 noremap <F5> @a
 noremap <F6> x
 
