@@ -15,11 +15,12 @@ bindkey -e
 # prompt config
 autoload -U promptinit && promptinit
 autoload -U colors && colors
-
+# get last returncode and color it
+local returncode="%(?..%{$fg[red]%} %? ↵%{$reset_color%})"
 # prompt config
 PROMPT="%(!.%{$bg[white]$fg[red]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%}.%{$bg[white]$fg[blue]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%})"
 # show time on right side
-RPROMPT="[%T]"
+RPROMPT="${returncode}[%T]"
 
 # fancy completion
 
