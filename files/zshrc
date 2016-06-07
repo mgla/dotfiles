@@ -12,24 +12,18 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-# prompt config
+## Prompt configuration
 autoload -U promptinit && promptinit
 autoload -U colors && colors
-# get last returncode and color it
-local returncode="%(?..%{$fg[red]%} %? ↵%{$reset_color%})"
-# prompt config
 PROMPT="%(!.%{$bg[white]$fg[red]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%}.%{$bg[white]$fg[blue]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~# %{$reset_color%})"
-# show time on right side
-RPROMPT="${returncode}[%T]"
+# show time on right side, get last returncode and color it
+RPROMPT="%{$fg[red]%}%?↵%{$reset_color%} [%T]"
 
 # fancy completion
-
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 
-
 # aliases
-
 alias tmux="tmux -2"
 alias ls="ls --color=auto"
 alias ll="ls -l"
