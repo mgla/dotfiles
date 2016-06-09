@@ -47,7 +47,7 @@ my %vimgithub = (
     'vim-airline-themes' => 'vim-airline/vim-airline-themes',
     'vim-fugitive'       => 'tpope/vim-fugitive.git',
     'vim-puppet'         => 'rodjek/vim-puppet',
-    'neocomplete'        => 'Shougo/neocomplete.vim',
+    'neocomplete'        => 'Shougo/neocomplete',
 );
 
 # Update/Install plugins from github
