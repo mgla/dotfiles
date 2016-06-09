@@ -15,9 +15,9 @@ bindkey -e
 ## Prompt configuration
 autoload -U promptinit && promptinit
 autoload -U colors && colors
-PROMPT="%(!.%{$bg[white]$fg[red]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~#  %{$reset_color%}.%{$bg[white]$fg[blue]%}%U%n@%m%u%{$reset_color $fg_bold[blue]%} %~#  %{$reset_color%})"
-# show time on right side, get last returncode and color it
-RPROMPT="%{$fg[red]%}%?↵%{$reset_color%} [%T]"
+PROMPT="%{$bg[white]%}%(!.%{$fg[red]%}.%{$fg[blue]%})%U%n@%m%u%{$reset_color $fg_bold[blue]%}%~%{$reset_color%}%{$fg[red]%} %?↵%{$fg_bold[blue]%}#%{$reset_color%}%}"
+# show time on right side.
+RPROMPT="[%T]"
 
 # fancy completion
 zstyle ':completion:*' menu select
