@@ -52,12 +52,15 @@ my %vimgithub = (
 
 # Update/Install plugins from github
 # FIXME this is a huge security risk.
+printf("Install/update vim modules from github.com:\n");
 while (my ($module, $path) = each %vimgithub) {
     chdir File::Spec->catdir($ENV{"HOME"}, '.vim', 'bundle') or die $!;
     if ( -d $module) {
         chdir $module;
+        printf("   * Update $module...\n");
         system('git pull -q');
     } else {
+        printf("   * Install $module...\n");
         system('git','clone', sprintf('git://github.com/%s', $path));
     }
 }
