@@ -15,7 +15,14 @@ bindkey -e
 ## Prompt configuration
 autoload -U promptinit && promptinit
 autoload -U colors && colors
-PROMPT="%{$bg[white]%}%(!.%{$fg[red]%}.%{$fg[blue]%})%U%n@%m%u%{$reset_color $fg_bold[blue]%}%~%{$reset_color%}%{$fg[red]%} %?↵%{$fg_bold[blue]%}#%{$reset_color%}%}"
+local pr_reset="%{$reset_color%}"
+PROMPT="%~%{$reset_color%}%{$fg[red]%} %?↵%{$fg_bold[blue]%}#%{$reset_color%}%}"
+PROMPT="%{$bg[white]%}%(!.%{$fg[red]%}.%{$fg[blue]%})"
+PROMPT+="%U%n@%m%u"
+PROMPT+="%{$reset_color $fg_bold[blue]%}"
+PROMPT+="%~${pr_reset}%{$fg[red]%}"
+PROMPT+="%?↵%{$fg_bold[blue]%}"
+PROMPT+="#$pr_reset  "
 # show time on right side.
 RPROMPT="[%T]"
 
