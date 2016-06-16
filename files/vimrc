@@ -10,7 +10,8 @@ set autoindent
 colorscheme elflord
 set bg=dark
 set t_Co=256
-
+" set colored column
+set colorcolumn=80
 " highlight trailing spaces and tabs
 set list!
 set listchars=tab:»·,trail:·
