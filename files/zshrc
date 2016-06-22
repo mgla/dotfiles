@@ -40,6 +40,7 @@ alias ....="cd ../../.."
 alias sudude="sudo"
 alias please='sudo $(history -n -1)'
 alias find='noglob find'
+alias systemctl='noglob systemctl'
 # meme alias
 alias wow="git status"
 alias such="git"
