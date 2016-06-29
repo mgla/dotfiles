@@ -34,6 +34,8 @@ zstyle ':completion:*' list-colors ''
 alias tmux="tmux -2"
 alias ls="ls --color=auto"
 alias ll="ls -l"
+alias ggrep="git grep"
+# FIXME refactor into a function.
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
