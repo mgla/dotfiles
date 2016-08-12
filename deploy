@@ -19,6 +19,7 @@ my $files = File::Spec->catdir($repodir, 'files');
 system('touch ~/.vimrc.more');
 system('mkdir -p ~/.vim/autoload');
 system('mkdir -p ~/.vim/bundle');
+system('mkdir -p ~/.config/yamllint');
 
 # Files for direct installation.
 my %install = (
@@ -28,6 +29,7 @@ my %install = (
     'screenrc'  => '%HOME%/.screenrc',
     'zprofile'  => '%HOME%/.zprofile',
     'vimrc'     => '%HOME%/.vimrc',
+    'yamllint.config'           => '%HOME%/.config/yamllint/config',
     'vim/autoload/pathogen.vim' => '%HOME%/.vim/autoload/pathogen.vim'
 );
 
