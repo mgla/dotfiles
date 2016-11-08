@@ -63,6 +63,6 @@ while (my ($module, $path) = each %vimgithub) {
         system('git pull -q');
     } else {
         printf("   * Install $module...\n");
-        system('git','clone', sprintf('git://github.com/%s', $path));
+        system('git','clone', sprintf('https://github.com/%s', $path));
     }
 }
