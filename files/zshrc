@@ -84,8 +84,8 @@ bindkey '^[OH' beginning-of-line
 bindkey '^R' history-incremental-search-backward
 
 # skipping words via CTRL-RightArrow/LeftArrow
-bindkey '^[OC' forward-word
-bindkey '^[OD' backward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
 
 # ignore debian global rc file
 unsetopt global_rcs
