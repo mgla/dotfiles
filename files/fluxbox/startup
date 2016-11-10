@@ -1,0 +1,6 @@
+# Apply german keymap
+setxkbmap de
+
+xterm &
+
+exec fluxbox

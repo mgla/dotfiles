@@ -13,9 +13,10 @@ require File::Spec;
 my $repodir = File::Basename::dirname(Cwd::abs_path(__FILE__));
 my $files = File::Spec->catdir($repodir, 'files');
 
-# Create vim skeleton, if not existing.
+# Create config skeletons for fluxbox, vim and more, if not existing.
 # Perl has no good core modules for touching files and recursive creation of directory trees.
 # Thus, we fall back to mkdir and touch here until a better implementation comes along.
+system('mkdir -p ~/.fluxbox');
 system('touch ~/.vimrc.more');
 system('mkdir -p ~/.vim/autoload');
 system('mkdir -p ~/.vim/bundle');
@@ -29,9 +30,10 @@ my %install = (
     'screenrc'  => '%HOME%/.screenrc',
     'zprofile'  => '%HOME%/.zprofile',
     'vimrc'     => '%HOME%/.vimrc',
+    'Xdefaults' => '%HOME%/.Xdefaults',
     'yamllint.config'           => '%HOME%/.config/yamllint/config',
     'vim/autoload/pathogen.vim' => '%HOME%/.vim/autoload/pathogen.vim',
-    'Xdefaults' => '%HOME%/.Xdefaults'
+    'fluxbox/startup'           => '%HOME%/.fluxbox/startup',
 );
 
 while (my ($key, $to) = each %install) {
