@@ -30,7 +30,8 @@ my %install = (
     'zprofile'  => '%HOME%/.zprofile',
     'vimrc'     => '%HOME%/.vimrc',
     'yamllint.config'           => '%HOME%/.config/yamllint/config',
-    'vim/autoload/pathogen.vim' => '%HOME%/.vim/autoload/pathogen.vim'
+    'vim/autoload/pathogen.vim' => '%HOME%/.vim/autoload/pathogen.vim',
+    'Xdefaults' => '%HOME%/.Xdefaults'
 );
 
 while (my ($key, $to) = each %install) {
