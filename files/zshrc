@@ -90,6 +90,16 @@ bindkey '^[[1;5C' forward-word
 # ignore debian global rc file
 unsetopt global_rcs
 
+# Autocomplete SSH by using .ssh/config
+h=()
+if [[ -r ~/.ssh/config ]]; then
+  h=($h ${${${(@M)${(f)"$(cat ~/.ssh/config)"}:#Host *}#Host }:#*[*?]*})
+fi
+if [[ $#h -gt 0 ]]; then
+  zstyle ':completion:*:ssh:*' hosts $h
+  zstyle ':completion:*:slogin:*' hosts $h
+fi
+
 if [ -f ~/.zshrc.more ]; then
 	source ~/.zshrc.more
 fi
