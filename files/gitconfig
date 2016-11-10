@@ -6,3 +6,6 @@
 	default = simple
 [alias]
 	lol = log --decorate --graph
+[user]
+	email = maik@glatki.eu
+	name = Maik Glatki
