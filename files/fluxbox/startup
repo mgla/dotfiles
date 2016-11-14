@@ -1,5 +1,6 @@
 # Apply german keymap
 setxkbmap de
+VBoxClient --clipboard
 
 xterm &
 
