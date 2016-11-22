@@ -109,6 +109,15 @@ if [[ ( !$? ) && ( -f ~/.ssh/id_rsa ) ]]; then
 	. ~/.keychain/$HOSTNAME-sh-gpg
 fi
 
+# AWS stuff
+function aws-cfn-validate() {
+	if [[ -n "$1" ]]; then
+		aws cloudformation validate-template --template-body "file://$1"
+	else
+		echo 'Need a parameter: Usage aws-cfn-validate $file'
+	fi
+}
+
 if [ -f ~/.zshrc.more ]; then
 	source ~/.zshrc.more
 fi
