@@ -4,6 +4,8 @@
 	ui = auto
 [push]
 	default = simple
+[merge]
+	ff = no
 [alias]
 	lol = log --decorate --graph
 [user]
