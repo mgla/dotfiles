@@ -24,14 +24,14 @@ system('mkdir -p ~/.config/yamllint');
 
 # Files for direct installation.
 my %install = (
-    'zshrc'     => '%HOME%/.zshrc',
+    'Xdefaults' => '%HOME%/.Xdefaults',
     'bashrc'    => '%HOME%/.bashrc',
     'gitconfig' => '%HOME%/.gitconfig',
     'screenrc'  => '%HOME%/.screenrc',
-    'zprofile'  => '%HOME%/.zprofile',
     'tmux.conf' => '%HOME%/.tmux.conf',
     'vimrc'     => '%HOME%/.vimrc',
-    'Xdefaults' => '%HOME%/.Xdefaults',
+    'zprofile'  => '%HOME%/.zprofile',
+    'zshrc'     => '%HOME%/.zshrc',
     'yamllint.config'           => '%HOME%/.config/yamllint/config',
     'vim/autoload/pathogen.vim' => '%HOME%/.vim/autoload/pathogen.vim',
     'fluxbox/startup'           => '%HOME%/.fluxbox/startup',
