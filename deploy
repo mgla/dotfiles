@@ -29,6 +29,7 @@ my %install = (
     'gitconfig' => '%HOME%/.gitconfig',
     'screenrc'  => '%HOME%/.screenrc',
     'zprofile'  => '%HOME%/.zprofile',
+    'tmux.conf' => '%HOME%/.tmux.conf',
     'vimrc'     => '%HOME%/.vimrc',
     'Xdefaults' => '%HOME%/.Xdefaults',
     'yamllint.config'           => '%HOME%/.config/yamllint/config',
