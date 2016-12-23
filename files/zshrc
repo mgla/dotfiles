@@ -11,6 +11,8 @@ SAVEHIST=$HISTSIZE
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
+# fix less highlighting in tmux
+export LESS_TERMCAP_so=$'\E[39;104m'
 
 ## Prompt configuration
 autoload -U promptinit && promptinit
