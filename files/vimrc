@@ -71,13 +71,22 @@ nnoremap k gk
 " toggle paste mode
 set pastetoggle=<F2>
 set scrolloff=3
-" move lines
-nnoremap <ESC>[1;5B :m .+1<CR>
+
+" move lines with Ctrl+Arrows
 nnoremap <ESC>[1;5A :m .-2<CR>
-vnoremap <ESC>[1;5B :m '>+1<CR>gv
+nnoremap <ESC>[1;5B :m .+1<CR>
+nnoremap <ESC>[1;5C :><CR>
+nnoremap <ESC>[1;5D :<<CR>
+
 vnoremap <ESC>[1;5A :m '<-2<CR>gv
-inoremap <ESC>[1;5B <Esc>:m .+1<CR>gi
+vnoremap <ESC>[1;5B :m '>+1<CR>gv
+vnoremap <ESC>[1;5C :><CR>gv
+vnoremap <ESC>[1;5D :<<CR>gv
+
 inoremap <ESC>[1;5A <Esc>:m .-2<CR>gi
+inoremap <ESC>[1;5B <Esc>:m .+1<CR>gi
+inoremap <ESC>[1;5C <Esc>:><CR>gi
+inoremap <ESC>[1;5D <Esc>:<<CR>gi
 " map <F5> to comment and <F6> to pseudo uncomment
 " ugly block comment macro
 let @a='I#OBOA'
