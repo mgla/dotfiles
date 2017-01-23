@@ -58,9 +58,15 @@ set ignorecase
 set smartcase
 set incsearch
 
+
+"" Key binds start here
 " bind F4 to hlsearch
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
 " toggle paste mode
 set pastetoggle=<F2>
