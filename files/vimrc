@@ -68,10 +68,10 @@ set scrolloff=3
 " move lines
 nnoremap <ESC>[B :m .+1<CR>
 nnoremap <ESC>[A :m .-2<CR>
-inoremap <M-Down> <Esc>:m .+1<CR>gi
-inoremap <M-Up> <Esc>:m .-2<CR>gi
-vnoremap <M-Down> :m '>+1<CR>gv
-vnoremap <M-Up> :m '<-2<CR>gv
+vnoremap <ESC>[B :m '>+1<CR>gv
+vnoremap <ESC>[A :m '<-2<CR>gv
+inoremap <ESC>[B <Esc>:m .+1<CR>gi
+inoremap <ESC>[A <Esc>:m .-2<CR>gi
 " map <F5> to comment and <F6> to pseudo uncomment
 " ugly block comment macro
 let @a='I#OBOA'
