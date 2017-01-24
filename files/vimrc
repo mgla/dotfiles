@@ -1,3 +1,18 @@
+"" Functions
+" return to last line, when opening a file again
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+"" General options and preferences
 scriptencoding utf-8
 set encoding=utf-8
 
@@ -19,19 +34,17 @@ set listchars=tab:»·,trail:·
 " set viminfo
 set viminfo='10,"\100,:20,%,n~/.viminfo
 
-" return to last line, when opening a file again
-function! ResCur()
-  if line("'\"") <= line("$")
-    normal! g`"
-    return 1
-  endif
-endfunction
+" perl smartsearch: if lowercase, ignore case
+set ignorecase
+set smartcase
+set incsearch
 
-augroup resCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
+set scrolloff=3
 
+" better file completition while opening files from vim
+set wildmode=list:longest
+
+"" File type specific options here
 filetype indent plugin on
 
 " never expand tabs in Makefiles - bugs them out
@@ -53,12 +66,6 @@ autocmd BufRead,BufNewFile *.template setlocal ft=json
 " .yaml files.
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
-" perl smartsearch: if lowercase, ignore case
-set ignorecase
-set smartcase
-set incsearch
-
-
 "" Key binds start here
 " bind F4 to hlsearch
 set hlsearch
@@ -70,7 +77,6 @@ nnoremap k gk
 
 " toggle paste mode
 set pastetoggle=<F2>
-set scrolloff=3
 
 " move lines with Ctrl+Arrows
 nnoremap <ESC>[1;5A :m .-2<CR>
@@ -92,9 +98,6 @@ inoremap <ESC>[1;5D <Esc>:<<CR>gi
 let @a='I#OBOA'
 noremap <F5> @a
 noremap <F6> x
-
-" better file completition while opening files from vim
-set wildmode=list:longest
 
 """ Plugins
 "" pathogen
