@@ -39,7 +39,7 @@ set ignorecase
 set smartcase
 set incsearch
 
-set scrolloff=3
+set scrolloff=5
 
 " better file completition while opening files from vim
 set wildmode=list:longest
