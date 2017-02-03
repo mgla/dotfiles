@@ -72,6 +72,10 @@ autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
+" reduce mapping timeouts to allow usage of Esc for leaving visual mode fast
+set timeoutlen=10
+set ttimeoutlen=0
+
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
