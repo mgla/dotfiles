@@ -64,7 +64,7 @@ while (my ($module, $path) = each %vimgithub) {
     if ( -d $module) {
         chdir $module;
         printf("   * Update $module...\n");
-        system('git pull -q -ff');
+        system('git pull -q --ff');
     } else {
         printf("   * Install $module...\n");
         system('git','clone', sprintf('https://github.com/%s', $path));
