@@ -72,6 +72,10 @@ autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
+" buffers
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-p> :bprevious<CR>
+
 " reduce mapping timeouts to allow usage of Esc for leaving visual mode fast
 set timeoutlen=10
 set ttimeoutlen=0
@@ -113,6 +117,8 @@ execute pathogen#infect()
 set noshowmode
 " autoshow
 set laststatus=2
+" Show buffers in line
+let g:airline#extensions#tabline#enabled = 1
 " fugitive integration
 let g:airline#extensions#branch#enabled = 1
 " powerline font
