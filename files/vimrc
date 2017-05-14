@@ -66,6 +66,8 @@ autocmd BufRead,BufNewFile *.pp setlocal noexpandtab smartindent
 autocmd BufRead,BufNewFile *.template setlocal ft=json
 " .yaml files.
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" .html files.
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 "" Key binds start here
 " bind F4 to hlsearch
