@@ -75,6 +75,8 @@ case $TERM in
     bindkey "^[[3~" delete-char
     bindkey "^[[1~" beginning-of-line
     bindkey "^[[4~" end-of-line
+    # Workaround for non-working backspace in tmux.
+    bindkey "^?" backward-delete-char
   ;;
   *xterm*|rxvt*|(dt|k|E|a)term)
     bindkey "^[[2~" yank
