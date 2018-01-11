@@ -22,8 +22,10 @@ PROMPT="%~%{$reset_color%}%{$fg[red]%} %?↵%{$fg_bold[blue]%}#%{$reset_color%}%
 PROMPT="%{$bg[white]%}%(!.%{$fg[red]%}.%{$fg[blue]%})"
 PROMPT+="%U%n@%m%u"
 PROMPT+="%{$reset_color $fg_bold[blue]%}"
-PROMPT+="%~${pr_reset}%{$fg[red]%}"
+PROMPT+="%~${pr_reset}"
+PROMPT+="%{$fg[red]%}"
 PROMPT+="%?↵%{$fg_bold[blue]%}"
+PROMPT+=$'\n'
 PROMPT+="#$pr_reset  "
 # show time on right side.
 RPROMPT="[%T]"
@@ -130,3 +132,4 @@ function aws-cfn-validate() {
 if [ -f ~/.zshrc.more ]; then
 	source ~/.zshrc.more
 fi
+
