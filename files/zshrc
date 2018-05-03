@@ -65,8 +65,10 @@ alias much="git"
 alias vum="vim"
 alias cf="cd"
 
-# add local bin to path
-export PATH=~/bin:$PATH
+# extend local path with dev stuff
+export GOPATH=~/go
+export PATH=~/bin:$PATH:/usr/local/go/bin:$GOPATH/bin
+
 # export vim as editor
 export EDITOR=vim
 
