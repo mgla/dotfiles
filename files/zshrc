@@ -116,10 +116,12 @@ fi
 # If keychain is installed, start it silently
 type "keychain" > /dev/null
 if [[ ( !$? ) && ( -f ~/.ssh/id_rsa ) ]]; then
-	keychain ~/.ssh/id_rsa
+	keychain --clear --quiet ~/.ssh/id_rsa
 	HOSTNAME=`uname -n`
 	. ~/.keychain/$HOSTNAME-sh
-	. ~/.keychain/$HOSTNAME-sh-gpg
+    if [[ -f ~/.keychain/$HOSTNAME-sh-gpg ]]; then
+		. ~/.keychain/$HOSTNAME-sh-gpg
+	fi
 fi
 
 # AWS stuff
