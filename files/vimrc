@@ -115,7 +115,7 @@ let @a='I#OBOA'
 noremap <F5> @a
 noremap <F6> x
 " repeat last shell command
-noremap <F7> :!!
+noremap <F7> :!!<CR>
 
 """ Plugins
 "" pathogen
