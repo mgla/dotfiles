@@ -91,6 +91,9 @@ nnoremap k gk
 " toggle paste mode
 set pastetoggle=<F2>
 
+" run current file with path
+noremap <F3> :! %:p<CR>
+
 " move lines with Ctrl+Arrows
 nnoremap <ESC>[1;5A :m .-2<CR>
 nnoremap <ESC>[1;5B :m .+1<CR>
