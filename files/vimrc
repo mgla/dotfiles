@@ -64,6 +64,7 @@ autocmd FileType javascript setlocal tabstop=2 expandtab shiftwidth=2 softtabsto
 autocmd BufRead,BufNewFile *.pp setlocal noexpandtab smartindent
 " AWS CFN files.
 autocmd BufRead,BufNewFile *.template setlocal ft=yaml
+autocmd BufRead,BufNewFile ConnectedFile setlocal ft=yaml
 " .yaml files.
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " .html files.
