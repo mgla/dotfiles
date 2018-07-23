@@ -67,7 +67,7 @@ alias cf="cd"
 
 # extend local path with dev stuff
 export GOPATH=~/go
-export PATH=~/bin:$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=~/.local/bin:~/bin:$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # export vim as editor
 export EDITOR=vim
