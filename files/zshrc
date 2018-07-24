@@ -114,13 +114,14 @@ if [[ $#h -gt 0 ]]; then
 fi
 
 # If keychain is installed, start it silently
-type "keychain" > /dev/null
-if [[ ( !$? ) && ( -f ~/.ssh/id_rsa ) ]]; then
-	keychain --clear --quiet ~/.ssh/id_rsa
-	HOSTNAME=`uname -n`
-	. ~/.keychain/$HOSTNAME-sh
-    if [[ -f ~/.keychain/$HOSTNAME-sh-gpg ]]; then
-		. ~/.keychain/$HOSTNAME-sh-gpg
+if type "keychain" > /dev/null; then
+	if [[ ( -f ~/.ssh/id_rsa ) ]]; then
+		keychain --clear --quiet ~/.ssh/id_rsa
+		HOSTNAME=`uname -n`
+		. ~/.keychain/$HOSTNAME-sh
+		if [[ -f ~/.keychain/$HOSTNAME-sh-gpg ]]; then
+			. ~/.keychain/$HOSTNAME-sh-gpg
+		fi
 	fi
 fi
 
