@@ -65,6 +65,8 @@ alias much="git"
 alias vum="vim"
 alias cf="cd"
 
+alias tf="terraform"
+
 # extend local path with dev stuff
 export GOPATH=~/go
 export PATH=~/.local/bin:~/bin:$PATH:/usr/local/go/bin:$GOPATH/bin
