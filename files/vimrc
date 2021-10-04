@@ -45,6 +45,9 @@ set scrolloff=5
 " better file completition while opening files from vim
 set wildmode=list:longest
 
+" visual bell off in order to silence windows style terminals
+set visualbell
+
 "" File type specific options here
 filetype indent plugin on
 
