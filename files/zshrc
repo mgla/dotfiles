@@ -66,6 +66,7 @@ alias vum="vim"
 alias cf="cd"
 
 alias tf="terraform"
+alias tg="terragrunt"
 
 # extend local path with dev stuff
 export GOPATH=~/go
