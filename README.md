@@ -7,6 +7,8 @@ Feel free to use.
 
 ## General stuff
 
+If Mac OS, requires GNU coreutils.
+
 The deploy script deploys the configuration:
 
 ```
